@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     sanity: {
         projectId: `${process.env.VUE_APP_PROJECTID}`,
         apiVersion: '2023-03-22',
-
         dataset:`${process.env.VUE_APP_DATASET}`,
         useCdn:false
     },
