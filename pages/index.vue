@@ -16,7 +16,7 @@ import urlFor from "~/utils/fonctions";
 const content = [
   { titre: "Yogathérapie", image: "Yogatherapie.png", buttonRdv: true, fromSanity: false },
   { titre: "Boite à outils", image: "BoiteAOutils.png", button: true, fromSanity: false},
-  { titre: "Massages Ayurvédiques", image: "massages.png", buttonRdv: true, fromSanity: false }
+  { titre: "Massages Ayurvédiques", image: "Massages.png", buttonRdv: true, fromSanity: false }
 ]
 
 const query = groq`*[_type == "articles"]`;
