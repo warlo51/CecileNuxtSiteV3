@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .web-center {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .web-right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: end;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end;
+    }
+}
+
+
+body{
+    background-color: #f7e8dd;
+}
+.bar{
+    background-color: #a2405d;
+}
+.backgroundBeige {
+    background-color: #f7e8dd;
+}
+.textePurple{
+    color: #a2405d;
+}
+
+.backgroundWhite{
+    background-color: white;
+}
+
+.textWhite{
+    color: white;
+}

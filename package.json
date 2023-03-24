@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@nuxtjs/sanity": "^1.6.0",
+    "@nuxtjs/tailwindcss": "^6.6.4",
+    "nuxt": "^3.3.1",
+    "nuxt-icon": "^0.3.3"
+  },
+  "dependencies": {
+    "@emotion/styled": "^11.10.6",
+    "@headlessui/vue": "^1.7.12",
+    "@heroicons/vue": "^2.0.16",
+    "@mui/icons-material": "^5.11.11",
+    "@sanity/image-url": "^1.0.2",
+    "@vue-hero-icons/solid": "^1.7.2",
+    "emailjs": "^4.0.1",
+    "screen-size": "^1.0.0",
+    "vue-mq": "^1.0.1"
+  }
+}
