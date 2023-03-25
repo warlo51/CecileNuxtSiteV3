@@ -1,5 +1,5 @@
 <template>
-  <header class="bar">
+  <header class="bar sticky top-0 z-20">
     <nav class="mx-auto flex max-w-7xl items-center justify-between relative p-6 lg:px-8 relative" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="/public" class="-m-1.5 p-1.5">

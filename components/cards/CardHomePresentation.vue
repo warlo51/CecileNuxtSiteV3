@@ -13,7 +13,7 @@
       </p>
       <p class="text-end underline mr-20 cursor-pointer" @click="showMore">{{seeMore}}</p>
     </div>
-    <img src="/images/logoAccueilSplit.png" width="150" class="absolute right-0"/>
+    <img src="/images/logoAccueilSplit.png" width="150" class="hidden lg:block absolute right-0 opacity-60"/>
   </div>
   <div v-if="more" class="lg:p-10 backgroundWhite justify-center items-center p-10 lg:text-2xl">
     <p>Ma première formation est celle d’infirmière. J'ai souhaité me former en médecine complémentaire pour mieux

@@ -16,7 +16,7 @@
         La yogathérapie peut intervenir sur l’ensemble des système du corps humains. N’hésitez pas à me
         contacter si vous souhaiter savoir si je peux vous accompagné au vue de vos troubles.
       </p>
-      <a>
+      <a href="/Contact">
         <button @mouseenter="showArrow" @mouseleave="hiddenArrow" class="bar textWhite text-2xl p-2 mt-10 flex flex-row">
         Contact
           <div v-if="arrow">
