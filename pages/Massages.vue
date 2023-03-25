@@ -37,9 +37,9 @@ import TypeAccompagnement from "~/components/massages/TypeAccompagnement.vue";
 import Benefices from "~/components/massages/Benefices.vue";
 
 const content = [
-  { titre: "Abhyanga", image: "Yogatherapie.png", buttonRdv: false, buttonModal:true, fromSanity: false },
-  { titre: "Shiro Abhyanga", image: "BoiteAOutils.png", button: false, buttonModal:true, fromSanity: false},
-  { titre: "Mukabhyanga", image: "Massages.png", buttonRdv: false, buttonModal:true, fromSanity: false }
+  { titre: "Abhyanga", image: "19.png", buttonRdv: false, buttonModal:true, fromSanity: false },
+  { titre: "Shiro Abhyanga", image: "21.png", button: false, buttonModal:true, fromSanity: false},
+  { titre: "Mukabhyanga", image: "22.png", buttonRdv: false, buttonModal:true, fromSanity: false }
 ]
 
 </script>

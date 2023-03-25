@@ -13,7 +13,15 @@
       </ul>
       <p>Si vous êtes enceinte, contactez-moi pour en discuter, cela dépendra de votre mois de gestation et du
         type de massage.</p>
-      <a><button class="bar textWhite text-2xl p-2 mt-10">Contact -></button></a>
+      <a href="/Contact">
+        <button @mouseenter="showArrow" @mouseleave="hiddenArrow" class="bar textWhite text-2xl p-2 mt-10 flex flex-row">
+          Contact
+          <div v-if="arrow">
+            <Icon name="ph:arrow-fat-left-fill" class="mr-1 rotate-180 ml-3 "/>
+          </div>
+
+        </button>
+      </a>
       <span class="font-bold mt-10">Je masse les femmes et exceptionnellement les hommes (conjointd'une cliente etc...)</span>
     </div>
   </div>

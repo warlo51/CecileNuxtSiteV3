@@ -26,7 +26,15 @@
               </p>
             </div>
             <div class="bg-gray-50 px-4 py-3 sm:px-6 text-center w-4/12 bg-transparent">
-              <a href="https://www.celeste-community.com/places/cecile-fabie/" target="_blank"><img src="@/assets/images/boutonRdv.svg"/></a>
+              <a href="/Contact">
+                <button @mouseenter="showArrow" @mouseleave="hiddenArrow" class="bar textWhite text-2xl p-2 mt-10 flex flex-row">
+                  Contact
+                  <div v-if="arrow">
+                    <Icon name="ph:arrow-fat-left-fill" class="mr-1 rotate-180 ml-3 "/>
+                  </div>
+
+                </button>
+              </a>
             </div>
           </div>
         </div>

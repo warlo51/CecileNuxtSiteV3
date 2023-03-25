@@ -18,6 +18,7 @@
 
 import urlFor from "~/utils/fonctions";
 import BoutonRetour from "~/components/menu/BoutonRetour.vue";
+
 const route = useRoute();
 
 const query = groq`*[_type == "articles" && _id == "${route.params.id}"]`;

@@ -2,7 +2,7 @@
   <CardHomePresentation />
   <Prestations :content="content"/>
   <Actualites :content="listOfArticles"/>
-  <TroisImages :content="content"/>
+  <TroisImages :content="threeimages"/>
 </template>
 <script setup>
 
@@ -17,6 +17,12 @@ const content = [
   { titre: "Yogathérapie", image: "Yogatherapie.png", buttonRdv: true, fromSanity: false },
   { titre: "Boite à outils", image: "BoiteAOutils.png", button: true, fromSanity: false},
   { titre: "Massages Ayurvédiques", image: "Massages.png", buttonRdv: true, fromSanity: false }
+]
+
+const threeimages = [
+  { titre: "", image: "6-min.png", buttonRdv: false, fromSanity: false },
+  { titre: "", image: "11.png", button: false, fromSanity: false},
+  { titre: "", image: "49.png", buttonRdv: false, fromSanity: false }
 ]
 
 const query = groq`*[_type == "articles"]`;
