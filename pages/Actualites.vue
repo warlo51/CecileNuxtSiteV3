@@ -3,28 +3,22 @@
     <div class="mb-10 lg:text-5xl">
       <h1>Actualités : articles, évènements...</h1>
     </div>
-    <div v-for="(article, index) in listOfArticles">
+    <div v-for="(article, index) in articles">
       <ImageGauche v-if="index%2 === 0" :article="article" :index="index"/>
       <ImageDroite v-else :article="article" :index="index"/>
     </div>
   </div>
 </template>
 <script setup>
+import { storeToRefs } from "pinia";
 import ImageGauche from "~/components/actualites/ImageGauche.vue";
 import ImageDroite from "~/components/actualites/ImageDroite.vue";
-import urlFor from "~/utils/fonctions";
+import { useArticlesStore } from "~/stores/ArticlesStore";
 
-const query = groq`*[_type == "articles"]`;
-const { data } = useSanityQuery(query);
 
-const listOfArticles = data.value?.map((article) => {
-  return {
-    ...article,
-    image: urlFor(article.image).url(),
-    fromSanity: true
-  }
-}).sort(function (a, b) {
-  return new Date(b._updatedAt) - new Date(a._updatedAt);
-});
+const articlesStore = useArticlesStore();
+const { fetchAllArticles } = articlesStore;
+const { articles } = storeToRefs(articlesStore);
 
+fetchAllArticles();
 </script>

@@ -21,7 +21,9 @@
       en médecine ayurvédique et en yogathérapie. De retour en France j’ai poursuivi mes apprentissages en
       Yogathérapie au sein de l'IDYT en France (Institut de Formation De Yogathérapie du Dr COUDRON). À ce jour
       j'accompagne les personnes désireuses d'améliorer leur bien être grâce aux outils de la Yogathérapie en séance
-      individuelle et collective et je vous propose des moments de détente grâce aux massages ayurvédiques.</p>
+      individuelle et collective.
+      Prochainement je souhaite également vous proposer des programmes d’accompagnement comprenant des séances de yogathérapie et des massages ayurvédiques, cela adapté à votre profil ayurvédique et à vos besoins.
+    </p>
   </div>
 </template>
 <script setup>

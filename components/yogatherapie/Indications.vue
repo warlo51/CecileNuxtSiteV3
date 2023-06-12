@@ -6,26 +6,35 @@
       <p>
         Elles sont nombreuses et variés !<br>
         La yogathérapie s’utilise aussi bien pour <span class="font-bold">prévenir des problèmes de santé</span> que pour <span class="font-bold">accompagner des
-        troubles déjà installé.</span><br>
-        Voici quelques exemple d’indication : Maladies auto-immune (polyarthrite rhumatoïde, spondylarthrite
-        ankylosante...), Maladies respiratoires (asthme...), maladies cardiovasculaire (hypertension), maladies
-        neurologiques (migraines, parkinson...) dans le texte enlever le mots « certains » dans la phrase et
-        remplacer par « des » -> « pour accompagner certain des troubles…). Puis rajouter à la fin, troubles
-        ostéoarticulaire (arthrose, lombalgie, cervicalgie…), dépression, difficulté dans la gestion de ses
-        émotions, trouble du sommeil, phobie, syndrome post traumatique…<br><br>
-        La yogathérapie peut intervenir sur l’ensemble des système du corps humains. N’hésitez pas à me
-        contacter si vous souhaiter savoir si je peux vous accompagné au vue de vos troubles.
+        troubles déjà installé.</span><br><br>
+        Voici quelques exemples d’indications :
       </p>
+      <ul style="list-style: inside">
+        <li>Maladies auto-immune (polyarthrite rhumatoïde, spondylarthrite ankylosante…)</li>
+        <li>Maladies respiratoires (asthme…)</li>
+        <li>Maladies cardiovasculaire (hypertension)</li>
+        <li>Maladies neurologiques (migraines, parkinson...)</li>
+        <li>Troubles ostéoarticulaire (arthrose, lombalgie, cervicalgie…)</li>
+        <li>Dépression</li>
+        <li>Difficulté dans la gestion de ses émotions</li>
+        <li>Trouble du sommeil</li>
+        <li>Phobie</li>
+        <li>Syndrome post traumatique…</li>
+      </ul>
+      <br>
+      <p>
+        La yogathérapie peut intervenir sur l’ensemble des système du corps humains et sur de nombreuses pathologies chroniques. N’hésitez pas à me contacter si vous souhaitez savoir si je peux vous accompagner !
+      </p>
+      <span class="font-bold mt-10">Pour rappel, j’interviens en compléments de la médecine conventionnelle. Un accompagnement ne substitut pas à un suivie psychologique ou médicale.</span>
       <a href="/Contact">
         <button @mouseenter="showArrow" @mouseleave="hiddenArrow" class="bar textWhite text-2xl p-2 mt-10 flex flex-row">
-        Contact
+          Contact
           <div v-if="arrow">
             <Icon name="ph:arrow-fat-left-fill" class="mr-1 rotate-180 ml-3 "/>
           </div>
 
         </button>
       </a>
-      <span class="font-bold mt-10">J'interviens en complément de la médecine conventionnelle.......</span>
     </div>
   </div>
 </template>

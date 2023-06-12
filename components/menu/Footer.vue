@@ -7,7 +7,7 @@
       <div class="mb-10 mt-10 lg:mt-0 lg:w-3/12 lg:ml-3">
         <ul class="mt-5 border-amber-50 border-2 rounded-2xl p-5">
           <li>Cécile FABIE</li>
-          <li><Icon name="ph:envelope" class="mr-1"/>yogavedasante@gmail.com</li>
+          <li><Icon name="ph:envelope" class="mr-1"/>cecile.fabie@gmail.com</li>
           <li><Icon name="ph:phone" class="mr-1"/>06.27.41.10.49</li>
         </ul>
       </div>
@@ -18,16 +18,37 @@
         </ul>
       </div>
       <div class="mb-10 mt-10 lg:w-7/12 lg:flex lg:flex-row lg:justify-center">
-        <ul class="mb-10 text-center lg:flex lg:flex-row lg:justify-center space-x-10">
+        <ul class="mb-10 text-center lg:flex lg:flex-row lg:justify-center space-x-10 hover:cursor-pointer">
           <li>CGV</li>
-          <li>Mentions légales</li>
-          <li>Politique de confidentialité</li>
+          <li @click="openModalOtherModal('ML')">Mentions légales</li>
+          <li  @click="openModalOtherModal('P')">Politique de confidentialité</li>
+          <ModalMentionLegalFooter v-if="isOpenML" @close-modal="closeModalOtherModal('ML')"/>
+          <ModalPolitiqueFooter v-if="isOpenP" @close-modal="closeModalOtherModal('P')"/>
         </ul>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+
+const isOpenML = ref(false);
+const isOpenP = ref(false);
+
+const closeModalOtherModal = (modal: string) => {
+  if(modal === 'ML') {
+    isOpenML.value = false;
+  } else if(modal === 'P') {
+    isOpenP.value = false;
+  }
+}
+
+const openModalOtherModal = (modal: string) => {
+  if(modal === 'ML') {
+    isOpenML.value = true;
+  } else if(modal === 'P') {
+    isOpenP.value = true;
+  }
+}
 </script>
 

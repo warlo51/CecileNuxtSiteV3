@@ -59,6 +59,7 @@
         <button type="submit" class="block w-full rounded-md bar px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Envoyer</button>
       </div>
     </form>
+    <ModalMessageEnvoye v-if="isOpenM" @close-modal="closeModalOtherModal()"/>
   </div>
 </template>
 
@@ -66,16 +67,20 @@
 import { ref } from 'vue'
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'
 import emailjs from "@emailjs/browser";
+const isOpenM = ref(false);
 
+const closeModalOtherModal = () => {
+    isOpenM.value = false;
+}
 const sendEmail = (e) => {
 
   e.preventDefault();
 
   emailjs.sendForm('service_nd3yrnh', 'template_7iue6tf', e.target, 'ou3dfBGfGf6Vh5h23')
       .then((result) => {
-        console.log("message envoyé")
+        isOpenM.value = true;
       }, (error) => {
-        console.log(error)
+        isOpenM.value = false;
       });
 };
 </script>

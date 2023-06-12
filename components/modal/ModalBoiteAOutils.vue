@@ -32,7 +32,7 @@
                   </div>
 
                   <a v-if="!content.prix" :href="content.fichier" target="_blank" @click="emits('closeModal')" :download="content.titre" ><button type="button" class="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bar py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Télécharger</button></a>
-                  <a v-else :href="content.fichier" target="_blank" :download="content.titre" ><button type="submit" class="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bar py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Télécharger</button></a>
+                  <a v-else ><button type="button" @click="goToPaiment(content)" class="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bar py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Télécharger</button></a>
                 </form>
               </section>
             </div>
@@ -45,6 +45,8 @@
 </template>
 <script setup lang="ts">
 
+import axios from "axios";
+
 const props = defineProps<{
   open: boolean;
   content: any;
@@ -52,4 +54,7 @@ const props = defineProps<{
 
 const emits = defineEmits<(e: "closeModal") => void>();
 
+const goToPaiment = (content: any) => {
+  axios.post('/api/achats/checkout_sessions', { body: { priceCode: content.priceCode } }).then((re) => console.log(re))
+}
 </script>
