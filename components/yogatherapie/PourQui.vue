@@ -7,8 +7,9 @@
       <p class="lg:text-2xl font-bold mb-20">Pour qui ?</p>
       <p>
         La yogathérapie est destiné à toutes personnes désireuses de mieux se sentir dans son corps !
-        Une pratique du antérieur du yoga n’est pas nécessaire.
-        J’accompagne des personnes du jeunes adolescent jusqu’à la personne âgée
+        Une pratique antérieur du yoga n’est pas nécessaire.
+        J’accompagne des personnes du jeunes adolescent jusqu’à la personne âgée.
+        Il n’est pas nécessaire d’avoir déjà pratiqué le yoga, il n’est pas non plus nécessaire d’être souple ! La yogathérapie s’adapte à la mobilité de chacun, elle peux donc être proposé à des personnes en fauteuil ou même allité.
       </p>
     </div>
   </div>

@@ -9,22 +9,25 @@
     <Indications />
     <div class="flex flex-col lg:flex-row lg:space-x-40 text-center p-3 mt-10">
       <div class="border-black lg:w-6/12 border-2 rounded-2xl mb-5 p-1">
-        <p class="font-bold">Mes tarifs :</p>
-        <ul>
-          <li>Abhyanga : 70 €</li>
-          <li>Shiro Abhyanga : 35 €</li>
-          <li>Muka Abhyanga : 35 €</li>
+        <p class="font-bold text-lg">MES TARIFS</p>
+        <br>
+        <ul style="text-align: start" class="pl-3">
+          <li  style="list-style: inside">Abhyanga : <span class="font-bold">70 €</span></li>
+          <br>
+          <li  style="list-style: inside">Shiro Abhyanga : <span class="font-bold">35 €</span></li>
+          <br>
+          <li  style="list-style: inside">Muka Abhyanga : <span class="font-bold">35 €</span></li>
         </ul>
       </div>
       <div class="border-black lg:w-6/12 border-2 rounded-2xl p-1">
-        <p class="font-bold">Les modes de paiements :</p>
-        <ul>
-          <li>Espèce</li>
-          <li>Chèque</li>
-          <li>Carte bleu si réservation en ligne</li>
+        <p class="font-bold text-lg">LES MODES DE PAIEMENTS</p>
+        <ul style="text-align: start" class="pl-3"><br>
+          <li  style="list-style: inside">Espèce</li><br>
+          <li  style="list-style: inside">Chèque</li><br>
+          <li  style="list-style: inside">Carte bleu si réservation en ligne</li>
         </ul>
         <div>
-          <a href="https://www.celeste-community.com/places/cecile-fabie/" class="web-right" target="_blank"><img src="@/assets/images/boutonRdv.svg" class="w-4/12"/></a>
+          <a href="https://www.celeste-community.com/places/cecile-fabie/" class="web-center" target="_blank"><img src="@/assets/images/boutonRdv.svg" class="w-4/12"/></a>
         </div>
       </div>
     </div>
