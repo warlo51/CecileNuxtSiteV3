@@ -19,7 +19,7 @@
                   {{ audio.titre }}
                 </a>
               </h3>
-              <p class="mt-1 text-sm text-gray-500">{{ audio.gratuit ? "Gratuit" : "Payant" }}</p>
+              <p class="mt-1 text-sm text-gray-500">{{ audio.gratuit === "Oui" ? "Gratuit" : "Payant" }}</p>
             </div>
             <p v-if="audio?.prix" class="text-sm font-medium text-gray-900">{{ audio?.prix }} €</p>
           </div>

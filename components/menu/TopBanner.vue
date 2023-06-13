@@ -1,10 +1,10 @@
 <template>
-  <header class="bar sticky top-0 z-20">
+  <header class="bar sticky top-0 z-20 relative">
+    <img class="h-64 left-30 md:left-40 absolute" src="@/assets/images/logoTransparent.png" alt="" />
     <nav class="mx-auto flex max-w-7xl items-center justify-between relative p-6 lg:px-8 relative" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="/public" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+          <img class="h-20" src="" alt="" />
         </a>
       </div>
       <div class="flex lg:hidden">
@@ -13,10 +13,10 @@
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-      <PopoverGroup class="hidden lg:flex lg:gap-x-12 textWhite lg:absolute lg:bottom-0 lg:right-10">
-        <a href="/" class="text-sm font-semibold leading-6 text-amber-50 hover:text-orange-400 lg:text-lg">Accueil</a>
+      <PopoverGroup class="hidden lg:flex lg:gap-x-12 textWhite lg:absolute lg:bottom-0 lg:right-10 lg:mb-2">
+        <a href="/" class="text-sm font-semibold leading-6 text-amber-50 hover:text-orange-400 lg:text-3xl">Accueil</a>
         <Popover class="relative">
-          <PopoverButton class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-amber-50 hover:text-orange-400 lg:text-lg">
+          <PopoverButton class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-amber-50 hover:text-orange-400 lg:text-3xl">
             Prestations
             <ChevronDownIcon class="h-5 w-5 flex-none text-amber-50" aria-hidden="true" />
           </PopoverButton>
@@ -47,11 +47,11 @@
           </transition>
         </Popover>
 
-        <a href="/Actualites" class="text-sm font-semibold leading-6 text-amber-50 hover:text-orange-400 lg:text-lg">Actualités</a>
-        <a href="/Contact" class="text-sm font-semibold leading-6 text-amber-50 hover:text-orange-400 lg:text-lg">Contact</a>
+        <a href="/Actualites" class="text-sm font-semibold leading-6 text-amber-50 hover:text-orange-400 lg:text-3xl">Actualités</a>
+        <a href="/Contact" class="text-sm font-semibold leading-6 text-amber-50 hover:text-orange-400 lg:text-3xl">Contact</a>
       </PopoverGroup>
       <div class="hidden lg:flex lg:absolute lg:top-0 lg:right-10">
-        <a href="#" class="text-sm font-semibold leading-6 text-amber-50 hover:text-orange-400 lg:text-lg">Espace membres <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm font-semibold leading-6 text-amber-50 hover:text-orange-400 lg:text-3xl lg:mt-2">Espace membres <span aria-hidden="true">&rarr;</span></a>
       </div>
     </nav>
     <Dialog as="div" class="lg:hidden " @close="mobileMenuOpen = false" :open="mobileMenuOpen">

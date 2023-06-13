@@ -14,4 +14,10 @@ export default defineNuxtConfig({
             ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
         ],
     },
+    runtimeConfig:{
+        public: {
+            stripeSK: process.env.VUE_APP_STRIPE_SECRET_KEY,
+            host: process.env.VUE_APP_HOST_URL
+        }
+    }
 })

@@ -1,9 +1,9 @@
 <template>
-  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+  <div class="relative z-20" aria-labelledby="modal-title" role="dialog" aria-modal="true">
 
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-    <div class="fixed inset-0 z-10 overflow-y-auto">
+    <div class="fixed inset-0 z-20 overflow-y-auto">
       <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
         <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full lg:w-8/12">
           <div class="grid w-full grid-cols-1 items-start gap-y-8 gap-x-6 sm:grid-cols-12 lg:gap-x-8">
@@ -17,7 +17,7 @@
               <section aria-labelledby="information-heading" class="mt-2">
                 <h3 id="information-heading" class="sr-only">Product information</h3>
 
-                <p v-if="content?.prix" class="text-2xl text-gray-900">{{ content?.prix }}</p>
+                <p v-if="content?.prix" class="text-2xl text-gray-900">{{ content?.prix }} €</p>
                 <p v-else class="text-2xl text-gray-900">Gratuit</p>
 
                 <!-- Reviews -->
@@ -33,6 +33,7 @@
 
                   <a v-if="!content.prix" :href="content.fichier" target="_blank" @click="emits('closeModal')" :download="content.titre" ><button type="button" class="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bar py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Télécharger</button></a>
                   <a v-else ><button type="button" @click="goToPaiment(content)" class="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bar py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Télécharger</button></a>
+
                 </form>
               </section>
             </div>
@@ -44,17 +45,31 @@
   </div>
 </template>
 <script setup lang="ts">
-
+import { StripeCheckout } from '@vue-stripe/vue-stripe';
 import axios from "axios";
-
+import Stripe from "stripe";
 const props = defineProps<{
   open: boolean;
   content: any;
 }>();
-
+const config = useRuntimeConfig();
 const emits = defineEmits<(e: "closeModal") => void>();
 
-const goToPaiment = (content: any) => {
-  axios.post('/api/achats/checkout_sessions', { body: { priceCode: content.priceCode } }).then((re) => console.log(re))
+const goToPaiment = async (content: any) => {
+  const stripe = new Stripe(config.public.stripeSK);
+  const session = await stripe.checkout.sessions.create({
+    line_items: [
+      {
+        // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+        price: `${content.priceCode}`,
+        quantity: 1 // prix de votre produit / commande// devise
+      },
+    ],
+    mode: 'payment',
+    success_url: `${config.public.host}/Audios?success=true`,
+    cancel_url: `${config.public.host}/Audios`,
+  });
+
+  window.location.href = session.url;
 }
 </script>

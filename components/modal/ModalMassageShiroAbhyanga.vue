@@ -15,6 +15,10 @@
               <p>
                 C’est un massage du haut du dos, des épaules et du cuir chevelu. Ce soin à pour but d’apaiser le mental et les tensions dû au stress qui s’accumulent dans le haut du corps.
               </p>
+              <br>
+              <p class="italic">
+                Durée du massage : entre 20-30min selon votre profil ayurvédique
+              </p>
             </div>
           </div>
         </div>

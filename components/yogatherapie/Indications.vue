@@ -6,7 +6,7 @@
       <p>
         Elles sont nombreuses et variés !<br>
         La yogathérapie s’utilise aussi bien pour <span class="font-bold">prévenir des problèmes de santé</span> que pour <span class="font-bold">accompagner des
-        troubles déjà installé.</span><br><br>
+        troubles déjà installés.</span><br><br>
         Voici quelques exemples d’indications :
       </p>
       <ul style="list-style: inside">

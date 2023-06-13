@@ -5,8 +5,9 @@
         <div>
           <img class="items-center justify-center lg:flex-1 rounded-t-2xl" :src="imageToLoad" width="400"/>
         </div>
-        <div class="items-center pt-1 justify-center h-20">
+        <div class="items-center pt-1 text-lg justify-center h-20 font-bold mb-2">
           <div>{{ title }}</div>
+          <div v-if="subtitle" class="italic font-light">{{ subtitle }}</div>
         </div>
       </div>
     </a>
@@ -37,10 +38,12 @@ import ModalWorkbook from "~/components/modal/ModalWorkbook.vue";
 const props = defineProps<{
   title: string;
   image: string;
+  subtitle?: string;
   button?: boolean;
   buttonRdv?: boolean;
   buttonModal?: boolean;
   fromSanity?: boolean;
+  goTo?: string;
 }>();
 
 const isOpenWorkbook = ref(false);
@@ -64,6 +67,8 @@ const goTo = () => {
     return "/Audios";
   } else if (props.title === "Outils numériques") {
     return "/OutilsNumeriques";
+  } else if (props.goTo) {
+    return props.goTo;
   }
 }
 const openModalOtherModal = () => {
