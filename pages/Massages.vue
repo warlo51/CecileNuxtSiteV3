@@ -1,6 +1,6 @@
 <template>
   <div class="mt-20 flex flex-col justify-center items-center relative">
-    <div class="mb-10 lg:text-5xl">
+    <div class="lg:text-6xl font-bold">
       <h1>Massages Ayurvédiques</h1>
     </div>
     <Introduction />

@@ -3,7 +3,7 @@
     <div class="w-10/12 lg:w-1/4">
       <img class="items-center justify-center lg:flex-1" src="../../assets/images/60.png"/>
     </div>
-    <div class="text-center text-sm p-4 lg:flex-1 lg:text-justify xl:text-justify lg:text-lg xl:text-2xl lg:pt-16 lg:pl-10 pt-16">
+    <div class="text-center text-sm lg:flex-1 lg:text-justify xl:text-justify lg:text-lg xl:text-2xl lg:pt-16 lg:pl-10">
       <p class="lg:text-2xl font-bold mb-20">Pour qui ?</p>
       <p>
         La yogathérapie est destiné à toutes personnes désireuses de mieux se sentir dans son corps !

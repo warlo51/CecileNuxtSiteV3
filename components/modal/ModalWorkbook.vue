@@ -1,9 +1,9 @@
 <template>
-  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+  <div class="relative z-20" aria-labelledby="modal-title" role="dialog" aria-modal="true">
 
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-    <div class="fixed inset-0 z-10 overflow-y-auto">
+    <div class="fixed inset-0 z-20 overflow-y-auto">
       <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
         <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
           <div class="flex flex-col">
@@ -17,7 +17,6 @@
             <div class="text-center">
               <p class="textePurple font-bold lg:text-2xl">& retrouvez votre équilibre santé en seulement 3 étapes !</p>
               <p>
-                J'adore faire des cadeaux ! <br>
                 Je vous offre ce workbook gratuit afin de vous aider à vous connaitre davantage et à enclencher dès maintenant, en toute autonomie, des actions somples
                 pour votre mieux-etre
               </p>

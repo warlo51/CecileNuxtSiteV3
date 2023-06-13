@@ -6,7 +6,7 @@
     </div>
 
     <div class="text-center text-sm p-4 lg:flex-1 lg:text-justify xl:text-justify lg:text-lg xl:text-2xl lg:p-32 pt-16">
-      <ul>
+      <ul style="list-style: inside">
         <li> Relaxation du corps et de l'esprit</li>
         <li> Elimination des toxines</li>
         <li> Prévention des signes de vieillissement</li>

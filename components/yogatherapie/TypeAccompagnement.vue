@@ -1,6 +1,6 @@
 <template>
   <div class="mt-20 flex flex-col justify-center items-center">
-    <div class="mb-10 lg:text-5xl">
+    <div class="mb-10 lg:text-6xl font-bold">
       <h1>Mes Prestations</h1>
     </div>
     <div class="flex flex-col lg:flex-row">

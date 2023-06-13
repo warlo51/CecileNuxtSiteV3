@@ -23,7 +23,7 @@
 
         </button>
       </a>
-      <span class="font-bold mt-10">Je masse les femmes et exceptionnellement les hommes (conjointd'une cliente etc...)</span>
+      <span class="font-bold mt-10">Je masse les femmes et exceptionnellement les hommes (conjoint d'une cliente etc...)</span>
     </div>
   </div>
 </template>
