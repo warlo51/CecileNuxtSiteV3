@@ -16,7 +16,8 @@ export default defineNuxtConfig({
     },
     runtimeConfig:{
         public: {
-            stripeSK: process.env.VUE_APP_STRIPE_SECRET_KEY
+            stripeSK: process.env.VUE_APP_STRIPE_SECRET_KEY,
+            host: process.env.VUE_APP_HOST_URL
         }
     }
 })

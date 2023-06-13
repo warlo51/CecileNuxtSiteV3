@@ -66,8 +66,8 @@ const goToPaiment = async (content: any) => {
       },
     ],
     mode: 'payment',
-    success_url: `http://192.168.1.12:3000/Audios?success=true`,
-    cancel_url: `http://192.168.1.12:3000/Audios`,
+    success_url: `${config.public.host}/Audios?success=true`,
+    cancel_url: `${config.public.host}/Audios`,
   });
 
   window.location.href = session.url;
