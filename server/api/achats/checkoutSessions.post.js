@@ -18,8 +18,8 @@ export default defineEventHandler( async (event) => {
             success_url: `/`,
             cancel_url: `/`,
         });
-
         console.log('Payment successful:', session)
+        return session
 
     } catch (error) {
         console.error('Error processing payment:', error)

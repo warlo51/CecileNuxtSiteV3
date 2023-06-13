@@ -33,6 +33,7 @@
 
                   <a v-if="!content.prix" :href="content.fichier" target="_blank" @click="emits('closeModal')" :download="content.titre" ><button type="button" class="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bar py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Télécharger</button></a>
                   <a v-else ><button type="button" @click="goToPaiment(content)" class="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bar py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Télécharger</button></a>
+
                 </form>
               </section>
             </div>
@@ -44,17 +45,31 @@
   </div>
 </template>
 <script setup lang="ts">
-
+import { StripeCheckout } from '@vue-stripe/vue-stripe';
 import axios from "axios";
-
+import Stripe from "stripe";
 const props = defineProps<{
   open: boolean;
   content: any;
 }>();
-
+const config = useRuntimeConfig();
 const emits = defineEmits<(e: "closeModal") => void>();
 
-const goToPaiment = (content: any) => {
-  axios.post('/api/achats/test', { body: { priceCode: content.priceCode } }).then((re) => console.log(re))
+const goToPaiment = async (content: any) => {
+  const stripe = new Stripe(config.public.stripeSK);
+  const session = await stripe.checkout.sessions.create({
+    line_items: [
+      {
+        // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+        price: `${content.priceCode}`,
+        quantity: 1 // prix de votre produit / commande// devise
+      },
+    ],
+    mode: 'payment',
+    success_url: `http://192.168.1.12:3000/Audios?success=true`,
+    cancel_url: `http://192.168.1.12:3000/Audios`,
+  });
+
+  window.location.href = session.url;
 }
 </script>
