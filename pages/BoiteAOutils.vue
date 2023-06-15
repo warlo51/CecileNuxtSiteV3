@@ -13,8 +13,8 @@ import Cards from "~/components/boiteOutils/Cards.vue";
 
 const content = [
   { titre: "Videos", image: "seanceIndiv.png", buttonRdv: false, buttonModal:false, fromSanity: false },
-  { titre: "Outils numériques", image: "seanceGroupe.jpg", button: false, buttonModal:false, fromSanity: false},
-  { titre: "Audios", image: "seanceStructure.jpg", buttonRdv: false, buttonModal:false, fromSanity: false }
+  { titre: "Outils numériques", image: "BoiteAOutils.png", button: false, buttonModal:false, fromSanity: false},
+  { titre: "Audios", image: "ModifContenuSiteWeb.png", buttonRdv: false, buttonModal:false, fromSanity: false }
 ]
 
 </script>

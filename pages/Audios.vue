@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <ModalBoiteAOutils v-if="showModal" :content="audiosSelected" @close-modal="closeModal"/>
+    <ModalBoiteAOutils v-if="showModal" :content="audiosSelected" @close-modal="closeModal" origin="Audios"/>
   </div>
 </template>
 <script setup>
