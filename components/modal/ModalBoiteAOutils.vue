@@ -51,6 +51,7 @@ import Stripe from "stripe";
 const props = defineProps<{
   open: boolean;
   content: any;
+  origin: string;
 }>();
 const config = useRuntimeConfig();
 const emits = defineEmits<(e: "closeModal") => void>();
@@ -66,8 +67,8 @@ const goToPaiment = async (content: any) => {
       },
     ],
     mode: 'payment',
-    success_url: `${config.public.host}/Audios?success=true`,
-    cancel_url: `${config.public.host}/Audios`,
+    success_url: `${config.public.host}/${props.origin}?success=true`,
+    cancel_url: `${config.public.host}/${props.origin}`,
   });
 
   window.location.href = session.url;
