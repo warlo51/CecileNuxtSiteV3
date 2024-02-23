@@ -14,6 +14,10 @@ export default defineNuxtConfig({
             ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
         ],
     },
+    router: {
+        // Utilisation de fromNodeMiddleware() pour définir le middleware
+        middleware: 'redirect'
+    },
     runtimeConfig:{
         public: {
             stripeSK: process.env.VUE_APP_STRIPE_SECRET_KEY,
